@@ -9,7 +9,7 @@ export default function Template({ data }) {
   const { frontmatter, html } = markdownRemark
   return (
     <Layout>
-    <SEO title="Home" />
+    <SEO title={frontmatter.title} />
     <div className="blog-post">
       <h1>{frontmatter.title}</h1>
       <h2>by: <b>{frontmatter.author}</b>, {frontmatter.date}</h2>
