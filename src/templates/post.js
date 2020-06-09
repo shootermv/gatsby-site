@@ -1,7 +1,10 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+// Utilities
+import kebabCase from "lodash/kebabCase"
 
 
 export default function Template({ data }) {
@@ -18,6 +21,9 @@ export default function Template({ data }) {
         className="blog-post-content"
         dangerouslySetInnerHTML={{ __html: html }}
       />
+      <Link to={`/author/${kebabCase(frontmatter.author)}/`}>
+         {frontmatter.author}
+      </Link>
     </div>
     </Layout>
   )
