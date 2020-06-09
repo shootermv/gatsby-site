@@ -1,5 +1,5 @@
 ---
-title: My Third Post
+title: בדין שימוש בתרופות בשבת
 date: 2020-05-10
 author: R. Joshua Noibert
 path: /my-third-post

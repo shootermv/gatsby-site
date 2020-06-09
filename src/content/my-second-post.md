@@ -1,5 +1,5 @@
 ---
-title: My Second Post
+title: זריקות בשבת
 date: 2019-08-10
 author: R. Avraham Shapira
 path: /my-second-post

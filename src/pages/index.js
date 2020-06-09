@@ -16,8 +16,8 @@ const IndexPage = ({
       <Layout>
         <SEO title="Home" />
         <h1>Hi people!##</h1>
-        <p>Welcome to your new Gatsby site.</p>
-        <p>Now go build something great.</p>
+        <p>Here are some articles:</p>
+        
         <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
           {Posts}
         </div>

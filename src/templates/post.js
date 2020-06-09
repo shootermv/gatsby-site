@@ -15,15 +15,14 @@ export default function Template({ data }) {
     <SEO title={frontmatter.title} />
     <div className="blog-post">
       <h1>{frontmatter.title}</h1>
-      <h2>by: <b>{frontmatter.author}</b>, {frontmatter.date}</h2>
+      <h2>by: <Link to={`/author/${kebabCase(frontmatter.author)}/`}>{frontmatter.author}</Link>, {frontmatter.date}</h2>
      
       <div
         className="blog-post-content"
         dangerouslySetInnerHTML={{ __html: html }}
       />
-      <Link to={`/author/${kebabCase(frontmatter.author)}/`}>
-         {frontmatter.author}
-      </Link>
+   
+      
     </div>
     </Layout>
   )
