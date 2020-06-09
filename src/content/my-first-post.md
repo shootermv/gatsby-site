@@ -5,4 +5,4 @@ author: R. Joshua Noibert
 path: /my-first-post
 ---
 This is my first Gatsby post written in Markdown!  
-![Chinese Salty Egg](./salty_egg.jpg)
+![Chinese Salty Egg](salty_egg.jpg)
