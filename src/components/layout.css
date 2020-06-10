@@ -2,6 +2,7 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  direction: rtl;
 }
 body {
   margin: 0;
@@ -618,5 +619,17 @@ pre tt:after {
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
+  }
+}
+.blog-post h2 ul {
+  list-style-type: none;
+  display: flex;
+}
+.blog-post h2 ul li {
+  padding: 5px;
+}
+@media only screen and (max-width: 480px) {
+  .blog-post h2 ul {
+    flex-direction: column;
   }
 }
