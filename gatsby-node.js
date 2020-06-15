@@ -7,7 +7,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
   const result = await graphql(`
     {
-      postsRemark: allMarkdownRemark(
+      posts: allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
         limit: 2000
       ) {
@@ -32,7 +32,7 @@ exports.createPages = async ({ actions, graphql }) => {
   }
 
 
-  result.data.postsRemark.edges.forEach(({ node }) => {
+  result.data.posts.edges.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.path,
       component: path.resolve(`src/templates/post.js`),
