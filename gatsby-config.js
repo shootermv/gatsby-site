@@ -1,5 +1,5 @@
 require("dotenv").config()
-
+const queries = require("./src/utils/algolia")
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -12,7 +12,7 @@ module.exports = {
       options: {
         appId: process.env.GATSBY_ALGOLIA_APP_ID,
         apiKey: process.env.ALGOLIA_ADMIN_KEY,
-      //  queries,
+        queries,
         chunkSize: 10000, // default: 1000
       },
     },
