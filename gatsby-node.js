@@ -31,8 +31,11 @@ exports.createPages = async ({ actions, graphql }) => {
     console.error(result.errors)
   }
 
+  // Extract post data from query
+  const posts = result.data.posts.edges;
 
-  result.data.posts.edges.forEach(({ node }) => {
+  // Make 'post' pages
+  posts.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.path,
       component: path.resolve(`src/templates/post.js`),
@@ -40,8 +43,9 @@ exports.createPages = async ({ actions, graphql }) => {
   })
 
   // Extract author data from query
-  const authors = result.data.authorsGroup.group
-  // Make tag pages
+  const authors = result.data.authorsGroup.group;
+
+  // Make 'author' pages
   authors.forEach(author => {
     createPage({
       path: `/author/${_.kebabCase(author.fieldValue)}/`,
